@@ -38,13 +38,15 @@
 								<h1>MOAT</h1>
 								<p>The Next Generation of Bitcoin</p>
 							</div>
-							<h2>TOKEN SALE BEGINS SOON!</h2>
+							<h4>Crowdsale round: Castle 🏰 (30% Bonus)</h4>
+							<!-- <h4>Tokens available: 2,000,000</h4> -->
+							<h3>round ending soon!</h3>
 								<!-- Display the countdown timer in an element -->
-							<h1 id="demo"></h1>
-
+							<h2 id="demo"></h2>
+							<br>
 							<script>
 							// Set the date we're counting down to
-							var countDownDate = new Date("Jun 7, 2021 00:00:00").getTime();
+							var countDownDate = new Date("Jun 14, 2021 00:00:00").getTime();
 
 							// Update the count down every 1 second
 							var x = setInterval(function() {
@@ -72,19 +74,17 @@
 							}
 							}, 1000);
 							</script>
-							<br>
 							<!-- <h2>BUY MOAT TOKEN WITH USD</h2>
-							<p><b>IMPORTANT! </b>You must share your email via Paypal when checking out.<br> We need this to send you instructions on how to collect your tokens. </p>
+							<p>Optional: Share your BSV address with us by adding it in your note</p> -->
 							<form action="https://www.paypal.com/donate" method="post" target="_top">
 								<input type="hidden" name="hosted_button_id" value="HK48XPMX582Q6" />
 								<input type="image" src="https://i.ibb.co/QCCYtdL/buyme2.jpg" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
 								<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-								</form>
-															
-							<h2>BUY MOAT TOKEN WITH BSV</h2>
-							<p> <b>IMPORTANT!</b> must be BSV, <b>not</b> Bitcoin, or your funds will be lost. <br> No email required.</p>
-							<h4>SEND BSV to the address below: </h4>
-							<h2 id="p1">1ETXg1LaF2TFvGFNZKoWDyufYZxRrkTpZD</h2>
+								</form>			
+							<!-- <h2>BUY MOAT TOKEN WITH BSV</h2>
+							<p> <b>IMPORTANT!</b> must be BSV, <b>not</b> Bitcoin, or your funds will be lost!</p> -->
+							<h4>Buy with BSV (send BSV to address below):</h4>
+							<h3 id="p1">1ETXg1LaF2TFvGFNZKoWDyufYZxRrkTpZD</h3>
 							<button onclick="copyToClipboard('#p1')">COPY!</button>
 							<script>
 								function copyToClipboard(element) {
@@ -94,34 +94,8 @@
 								document.execCommand("copy");
 								$temp.remove();
 								}
-							</script> -->
+							</script>
 								
-							<form id="myForm">
-								<center><div class="fields">
-									<div class="field half">
-										<label for="email"><b>Register for the Token Sale!</b></label>
-										<input type="text" name="email" id="email" placeholder="your@email.com"/>
-										<br>
-										<input type="submit" value="submit" class="primary"/>
-									</div>
-								</div><br></center>
-							</form>
-							<script>
-							const thisForm = document.getElementById('myForm');
-							thisForm.addEventListener('submit', async function (e) {
-								e.preventDefault();
-								const formData = new FormData(thisForm).entries()
-								const response = await fetch('https://api.pinata.cloud/pinning/pinJSONToIPFS', {
-									method: 'POST',
-									headers: { 'Content-Type': 'application/json', 'pinata_api_key': 'ef9c225af8bd61240d8f', 'pinata_secret_api_key': 'aca8fa863b14613053adeb647733457fe0cf508482b6bd42bc504227aa7959d4'},
-									body: JSON.stringify(Object.fromEntries(formData))
-								});
-								window.location.assign("https://moat.network");
-								// const result = await response.json();
-								// console.log(result)
-							});
-						</script>
-						<!-- <a href="images/moatWhitePaper.pdf"><b>Get the White Paper!</b></a> -->
 						<br><br>
 						</div>
 					</header>
@@ -134,10 +108,21 @@
 								<h2 class="major">Intro</h2>
 								<span class="image main"><img src="images/castle2.jpg" alt="" /></span>
 								<p>A historic window has opened</p>
+
 								<p>Bitcoin’s Blockchain technology is at the advent of becoming critical infrastructure for the world. Smart contracts are finally unbounded on top of bitcoin.
 									But mining does not reflect the “unbounded” nature of Satoshi’s Vision. The training wheels have been taken off, but mining is still constrained by the thinking of the past era.
 									Our goal is to revitalize and re-innovate mining for this new era with a next generation on-chain mining pool and to fund it by conducting the first true crowdsale on top of Bitcoin.</p>
-
+								<p><b>We propose a decentralized, on-chain mining pool for truly-unbounded, general-purpose computation on Bitcoin as envisioned by Satoshi Nakomoto (BSV). It overcomes limits of existing pools by compensating miners proportionally to block size and the amount of energy required for executing unbounded smart contracts, thereby creating an energy oracle. By fairly rewarding general computation, MOAT will shift payouts towards miners on general-purpose hardware.</b></p>
+								Bitcoin transactions are smart contracts in their simplest, most fundamental form. But contracts have been limited on top of Bitcoin by a bevy of arbitrary constraints. Among them are the contract size limit, block size limit, the opcode number limit, and many opcodes being turned off. But now, the locks have been taken off and unbounded, general computation is now possible on top of Bitcoin (BSV).
+<p>
+Bitcoin’s training wheels have been taken off, but mining is still constrained by the thinking of the past era. We will revitalize mining with a next generation, on-chain mining pool and fund it by conducting the first crowdsale for the first feature-complete token on top of Bitcoin. This mining pool will be founded on a new concept of mining for the new era of Bitcoin. 
+<br><br>
+Mining has to change, because the work to mine a block has changed. The nature of the work required to validate a block of transactions and build a block header in the era of unbounded smart contracts is very different from pure hashing. For miners whose endeavours are rapidly commoditized over time, the difference between accurately accounting for this work, versus not doing so, can mean the difference between being in the black or in the red. As smart contracts become longer and more complex, this problem will get much worse.
+<br><br>
+Mining needs a new way to reward the miners for their work, a method that scales with the block size and complexity of the contract. There is one way to measure work that is easy to validate and hard to fake: power consumption. Computation requires energy. We incentivize succinct snapshots (power attestations) from your GrandMa’s Bitcoin miners about their power consumption. Power attestations will then be validated using gametheoretic guarantees and network analysis, then used in the payout structure.
+<br><br>
+Incidentally, these snapshots will also serve as proof-of-delivery of electricity allowing us to build on-chain marketplaces for electricity and energy tokens. Mining is the outpoint for all the energy that goes into Bitcoin, and of course it's also how transactions are processed. If we track the energy of mining on-chain, we also track the energy of transactions, smart contracts, and computation. By creating a network of power attestations, the network could become a global energy oracle.
+</p>
 									<p>Whether you're a miner, a smart-scrivener, a quantum information scientist or just a kitchen (al)chemist, you can now be part of minting a new era.</p>
 									<b><a href="https://jaesonbooker.medium.com/moat-the-next-generation-in-bitcoin-fdad705f72aa?sk=bf37a5612168c8dfe836fccef764b01e">Read more about us on Medium!</a></b>
 							</article>
@@ -146,20 +131,71 @@
 							<article id="work">
 								<h2 class="major">Info</h2>
 								<span class="image main"><img src="images/moat2.jpg" alt="" /></span>
-								<p>Bitcoin’s Blockchain technology is at the advent of becoming critical infrastructure for the world. Smart contracts are finally unbounded on top of bitcoin. But mining does not reflect the “unbounded” nature of Satoshi’s Vision. The training wheels have been taken off, but mining is still constrained by the thinking of the past era. Our goal is to revitalize and re-innovate mining for this new era with a next generation on-chain mining pool and to fund it by conducting the first true crowdsale for the first true token on top of Bitcoin.
+								<br>
+								<a href="images/moatWhitePaper.pdf"><b>Read the Gold Paper!</b></a>
+								<br><br>
+<h1>What is MOAT?</h1>
+<ui>
+	<li>It’s power-aware Ether</li>
+	<li>It’s a network-wide mining pool so everyone gets paid</li>
+	<li>It pays the network for computation based off the energy consumed</li>
+	<li>It is Built on BSV, the One True Bitcoin</li>
+	<li>It solves the 51% takeover problem</li>
+</ui>
 <br><br>
-Bitcoin transactions are smart contracts not only in their simplest most fundamnetal and prototypical form but always. But contracts have been limited on top of bitcoin by a bevy of arbitrary constraints. Among them the contract size limit, the opcode number limit, and the AND & OR OPCODES, among many, being turned off. With the locks taken off and general contracting now possible on top of Bitcoin the "work" that a miner does has changed in fundamental ways, it takes significant work to run & validate block of transactions.
+<h1>Why it is better</h1>
+<ui>
+	<li>It is built on BSV, which is better than ethereum because of unlimited blocksize.</li>
+	<li>Sharding on BSV is solved by default.</li>
+	<li>With Moat, everyone is rewarded for mining because it is a single mining pool.</li>
+	<li>It is more decentralized by design. Most bitcoin mining happens in large mining pools, which creates centralization and makes a 51% attack more likely.</li>
+</ui>
 <br><br>
-This being the case notion of the "work" that a miners does has been wrong-headed just like the locks on Bitcoin were wrong headed. Miners need a way for accounting for the whole work of the mining process now that the relative weight of the first component of the mining process has changed. The nature of the work required to validate a block of transactions and build a block header is very different than the work required to find a winning block header hash. For miners whose endeavours are rapidly commodotized over time the difference between accurately accounting for this work and not accurately accounting for this work can mean the difference between being in the black or in the red.
-<br><br>
-But there's a problem, how do you accurately account for the work that a miner does at any precision? As previously discussed Bitcoin contracts can now finally be arbitrarily general and the work involved is not merely hashing but the storage, running, validation, and processing of Bitcoin contracts. In order to measure the work that goes into a bitcoin transaction, and thereby the work that goes into a block of transactions, and all the work of mining and Bitcoin altogether we need a way to measure the work that goes into general computation.
-<br><br>
-There are many possible ways to approach this problem but we propose a novel cryptoeconomic method. There is one way to measure work that is easy to validate and hard to fake: power. Computation, whether hashing, block validation, transaction validation requires energy. Block acceptance requires a dynamically self-adjusting cryptoeconomically enforced amount of work and miners must expend energy to do this work. Due to Bitcon's nature, we can measure this energy with cryptoeconomic guarantees.
-<br><br>
-We propose a novel protocol consistent way to mine, which brings mining on chain in order to better reward miners for their work through a novel pool payout structure based on the energy necessary to do the computational work of mining.
-<br><br>
-Mining is the outpoint for all the energy that's goes into Bitcoin and of course it's also how transactions are processed. So it's the outpoint that cointains all the other outpoints. If we are tracking the energetics of mining on chain we are also tracking the energetics of transactions and thereby the energetics of everything happening in the economy creating an energy oracle.</p>
-<br>
+<h3>
+	Energy Problem
+</h3>
+<p>Bitcoin is using a huge amount of energy, destroying the Earth by causing pollution.
+	Bitcoin is inefficient by design. It is energy intensive because miners have to solve a bunch of math problems (PoW) for a chance of earning coin.
+	</p>
+	<br>
+	<h3>
+		How does MOAT solve the bitcoin energy problem?
+	</h3>
+	<p>It solves the bitcoin energy problem by using Proof of Power (PoP) instead of PoW. MOAT uses an oracle (energy accounting middleware) to show that that energy is available, rather than using hashing to show that energy was consumed. </p>
+	<h3>
+		Use of funds 
+	</h3>
+	<p>The MOAT team will use it to develop the oracle and the decentralized mining pool. </p>
+	<h3>
+		What tokens will be used for
+	</h3>
+	<p>You will be able to use tokens for general computation on the BSV chain. By providing computation, miners will earn tokens. </p>
+	<br>
+	<h2>A new world for Bitcoin: Satoshi’s Vision</h2>
+	<br>
+	<p>When Bitcoin first began, Satoshi had a vision for it, where any transaction could be published on its public ledger. Since then, constraints were put on the system, limiting the kind of transaction that could occur. These constraints limited Bitcoin’s evolution as a network. Until now. The limitations have now been removed with the creation of Bitcoin SV, freeing Bitcoin to expand outside of normal transactions. With Bitcoin SV (Bitcoin), Satoshi’s original intentions for the network are finally being realized.</p>
+		
+	<p>At Moat, we are realizing this new potential in the network. We are creating the world’s first true Token on top of Bitcoin. You can think of a token as a new currency that is validated and backed by the Bitcoin network, making it secure and transferable.</p>
+
+	<p>​Miners in Moat’s network will be able to earn tokens for their work. Individuals will be able to buy and sell their tokens on exchanges. And people will be able to purchase tokens from Moat in the world’s first true crowdsale on top of Bitcoin.</p>
+	<h3>The challenge of mining pools</h3>
+	<p>When mining on Bitcoin first began, individuals were able to use their own computers, connect them to the network, and begin making money by being awarded what are called mining blocks. With Bitcoin’s expansion, it has become nearly impossible for individual miners to make a profit. From this, Mining Pools began to emerge. Users can join mining pools, and whenever someone in the pool is awarded a block, everyone in the pool shares in the reward, relative to how much computing power they contributed.</p>
+	<h3>Risks of Bitcoin mining pools</h3>
+	<p>But this came at a cost. One of Bitcoin’s greatest features is that it is decentralized. No centralized authority controls Bitcoin, or makes decisions for the network. But mining pools are centralized under a single authority, and they are consuming a greater and greater percentage of the network. If the three most major mining pools colluded, they could make decisions for Bitcoin’s future, taking it out of the hands of individuals.
+	</p>
+	<h3>Moat is a decentralized mining pool</h3>
+	<p>Just like the Bitcoin network itself, Moat will be decentralized. No single authority controls the pool, with the goal of making it fully decentralized. Miners will be able to join the network, earn tokens for their work, and make decisions for the network’s future. A network that is truly in the hands of the users.
+	</p>
+	<br>
+	<h1>A new way to look at energy</h1>
+	<br>
+	<h3>A problem of takeovers</h3>
+	<p>A question early on for Bitcoin was how to prevent someone from taking over the network. The ideal is that every participant has a say in changes made, and if 51% agree on something, the change is implemented. But how do you keep track of these participants? Everyone’s identification on Bitcoin is created using what is called a Public Key, which works as a form of identification. But an individual could generate thousands, or millions, of public keys and takeover the network. What prevents this from happening?</p>
+	<h3>Solved with proof of work</h3>
+	<p>It is accomplished using what is called Proof of Work. By solving mathematical puzzles, which take up a large amount of computing power to accomplish, you prove that you possess that computation, and are unable to fool the network. But this comes at a cost. The energy consumed on Bitcoin’s network is currently greater than the energy consumed by Ireland, and a large number of developing countries.</p>
+	<h3>Power</h3>
+	<p>Moat is creating a new form of energy accounting. Each participant will have the power they use to mine validated on-chain, and will receive a percentage of the mining pool’s rewards based on how much power they have. We are changing the way people keep track of power.</p>
+	<h3>We are excited to be pioneering the next stage in the world of cryptocurrencies and decentralized ecosystems. Join us as we mint a new era!</h3>
 </article>
 						<article id="token">
 							<h2 class="major">Token Sale</h2>
@@ -167,7 +203,9 @@ Mining is the outpoint for all the energy that's goes into Bitcoin and of course
 							<h3>Timeline</h3>
 								<h4>May 2021 - Token Presale
 								<br>
-								June - Crowdsale
+								June - Crowdsale Begins!
+								<br>
+								July - Crowdsale Ends!
 								<br>
 								August - Mining Pool 
 								<br>
@@ -180,25 +218,40 @@ Mining is the outpoint for all the energy that's goes into Bitcoin and of course
 						<span class="image main"><img src="images/moatChart.png" alt="" /></span>
 						<br>
 						<h3>Crowdsale</h3>
-								<h4>Length - 14 Days
+								<h4>Length - 35 Days
 								<br>
 								Begins: June 7, 2021 at 12:00AM EST
 								<br>
-								Ends: June 21st, 2021 at 12:00AM EST
+								Ends: July 12th, 2021 at 12:00AM EST
 								<br>
-								Total tokens: 10,000,000
+								Total tokens: 12,000,000
 								</h4>
 								<br>
+								<h3>Rounds: 5</h3>
+								<h4>
+									<br>
+									CASTLE 🏰 <br>30% Bonus<br> June 7th 12:00AM EST - June 14th 12:00AM EST
+									<br><br>
+									LAND 🌎  <br>15% Bonus<br> June 14th 12:01AM EST - June 21st 12:00AM EST
+									<br><br>
+									WATER 💧  <br>10% Bonus<br> June 21st 12:01AM EST - June 28th 12:00AM EST
+									<br><br>
+									AIR 🌬️ <br>5% Bonus<br> June 28th 12:01AM EST - July 5th 12:00AM EST
+									<br><br>
+									FIRE 🔥  <br>Final Round!</br> July 5th 12:01AM EST - July 12th 12:00AM EST
+									</h4>
+									<br>
 							<p><b>Purpose</b></p>
 							<p>The MOAT Crowdsale will support the development, operations, and maintenance of the Moat Network. It will provide funding to the Founding Team, including engineers, advisors, and business operations. It will also provide grants for the support and growth of the Moat community. A percentage will also go toward the Foundation to support Moat's longterm progress and survival.</p>
 							<p><b>Token Distribution</b></p>
 							<p>Tokens will be distributed in the form of an auction. The bigger your purchase is, the bigger the total percentage of tokens you will receive. For example, if one person purchases tokens for a thousand dollars, they would receive 100% of the tokens alloted for the crowdsale. But if someone else then makes a purchase of 9,000 dollars, the first person would get 10% of the crowdsale, and the second would receive 90%. The final allocation will be determined at the end of the crowdsale period.</p>
 							<p><b>Token Delivery</b></p>
 							<p>The allocated amount of tokens for each buyer will be sent after the end of the crowdsale to the address the buyer providesd during the sale. For this reason, you will need to provide a BSV (Bitcoin Satoshi Vision) address.</p>
-							<p><b>Presale</b></p>
-							<p>Those who participate in the token presale will receive a 30% bonus of the total tokens allocated during the crowdsale. For example, if someone buys 1,000 dollars during the presale, and someone buys 9,000 dollars during the crowdsale, the presale buyer will receive 12.6% of the total allocation, instead of just the 10% they would have received if they had bought during the crowdsale.</p>
+							<p><b>Bonuses</b></p>
+							<p>Those who participate in a bonus round will receive a percentage bonus of the total tokens allocated during the crowdsale. For example, if someone buys 1,000 dollars during the first round, at 30% bonus, and someone buys 9,000 dollars during the crowdsale, the first buyer will receive 12.6% of the total allocation, instead of just the 10% they would have received if they had bought without a bonus.</p>
 							<p><b>Token Use</b></p>
 							<p>The tokens will be used in the future on the Moat Network to reward miners based on the energy they contribute. For this reason, you can think of MOAT as both an Energy Token and a Mining Token. This gives it concrete value, since it will represent the amount of Bitcoin mined in the network.</p>
+						
 						</article>
 						<!-- About -->
 							<article id="about">
@@ -215,6 +268,12 @@ Mining is the outpoint for all the energy that's goes into Bitcoin and of course
 									<li><a href="https://www.linkedin.com/in/jaeson-booker/" ><span class="label">LinkedIn</span></a></li>
 								<br>
 								<p>Jaeson has been involved in many crypto projects. He helped develop the curriculum for the world's first University-level Blockchain class while at Domincan University. He has assisted with teaching students how to create smart contracts, tokens, and decentralized applications. He has worked with Insight Data Science to create a project for incentivizing data science contributions using Ethereum. He is co-founder of the Castle Company, working to scale the number of developer communities for blockchain engineers around the world.</p>
+								<span class="image main"><img src="images/eli.jpeg" alt="" /></span>
+								<h2>Eli Sakov - Lead Engineer</h2>
+								<li>Software Lead - Unspun</li>
+									<li><a href="https://www.linkedin.com/in/eli-sakov-b6555688/" ><span class="label">LinkedIn</span></a></li>
+									<br>
+								<p>Eli rapidly builds new products for fast-moving companies. He specializes in Web App Development, AR, Machine Learning, and the human side of Engineering. He was the lead developer for Ondaka, an Industrial 3D modelling & machine vision startup. He lead the team at Kaliber.AI for Artificial Intelligence and Full Stack Development, and has been involved in many other software companies, including Co-Founder of Invisible Analytics and engineer at ErgoDirect.</p>
 							</article>
 
 						<!-- Contact -->
